@@ -75,6 +75,7 @@ const ProfilePage = () => {
     if (success) {
       setIsEditing(false);
       setAuthUser({ ...authUser, ...changedData, profilePic: imagePreview });
+      setUserProfile((prevProfile) => ({ ...prevProfile, ...changedData })); // Dynamically update userProfile
     }
   };
 

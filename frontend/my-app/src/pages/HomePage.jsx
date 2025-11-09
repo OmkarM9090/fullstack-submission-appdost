@@ -23,10 +23,10 @@ const PostFeed = () => {
     <div className="md:col-span-2 space-y-6">
       <CreatePost onPostCreated={handlePostCreated} />
 
-      {loading && <p className="text-center">Loading feed...</p>}
+      {loading && <p className="text-center text-gray-600 dark:text-gray-300">Loading feed...</p>}
       
       {!loading && posts.length === 0 && (
-        <p className="text-center">No posts yet. Be the first to post!</p>
+        <p className="text-center text-gray-600 dark:text-gray-300">No posts yet. Be the first to post!</p>
       )}
 
       {!loading && posts.length > 0 && (

@@ -7,19 +7,19 @@ import Button from '../common/Button';
 const CreatePost = ({ onPostCreated }) => {
   const { authUser } = useAuthStore();
   const [text, setText] = useState('');
-  const [image, setImage] = useState(null); // Will store base64 string
-  const [imagePreview, setImagePreview] = useState(null); // For showing the user
+  const [image, setImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
   const { loading, createPost } = useCreatePost();
   const fileInputRef = useRef(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImagePreview(URL.createObjectURL(file)); // Create a local URL for preview
-      
+      setImagePreview(URL.createObjectURL(file));
+
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImage(reader.result); // This is the base64 string
+        setImage(reader.result);
       };
       reader.readAsDataURL(file);
     }
@@ -29,9 +29,9 @@ const CreatePost = ({ onPostCreated }) => {
     setImage(null);
     setImagePreview(null);
     if (fileInputRef.current) {
-      fileInputRef.current.value = null; // Reset file input
+      fileInputRef.current.value = null;
     }
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,33 +39,33 @@ const CreatePost = ({ onPostCreated }) => {
     if (newPost) {
       setText('');
       removeImage();
-      onPostCreated(newPost); // Pass the new post up to the feed
+      onPostCreated(newPost);
     }
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+    <div className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-4 rounded-2xl shadow-lg shadow-gray-300/50 dark:shadow-blue-900/30">
       <div className="flex space-x-3">
         {authUser.profilePic ? (
-          <img src={authUser.profilePic} alt="Profile" className="w-12 h-12 rounded-full" />
+          <img src={authUser.profilePic} alt="Profile" className="w-12 h-12 rounded-full border-2 border-gradient-to-r from-blue-500 to-blue-600" />
         ) : (
-          <div className="w-12 h-12 rounded-full bg-gray-300"></div>
+          <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-700"></div>
         )}
         <textarea
-          className="w-full p-2 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:outline-none"
+          className="w-full p-2 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           rows="3"
           placeholder={`What's on your mind, ${authUser.fullName.split(' ')[0]}?`}
           value={text}
           onChange={(e) => setText(e.target.value)}
         ></textarea>
       </div>
-      
+
       {imagePreview && (
         <div className="mt-4 relative">
           <img src={imagePreview} alt="Preview" className="w-full rounded-lg" />
           <button
             onClick={removeImage}
-            className="absolute top-2 right-2 p-1 bg-gray-800 bg-opacity-50 rounded-full"
+            className="absolute top-2 right-2 p-1 bg-gray-800 bg-opacity-50 rounded-full hover:bg-gray-700"
           >
             <XCircleIcon className="w-6 h-6 text-white" />
           </button>
@@ -80,13 +80,13 @@ const CreatePost = ({ onPostCreated }) => {
         </label>
 
         <div className="w-24">
-            <Button
-              onClick={handleSubmit}
-              isLoading={loading}
-              disabled={loading || !text}
-            >
-              Post
-            </Button>
+          <Button
+            onClick={handleSubmit}
+            isLoading={loading}
+            disabled={loading || !text}
+          >
+            Post
+          </Button>
         </div>
       </div>
     </div>

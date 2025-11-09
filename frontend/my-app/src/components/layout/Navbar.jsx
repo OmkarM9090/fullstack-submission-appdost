@@ -89,34 +89,33 @@ const Navbar = () => {
     // ---------------------------------
 
     return (
-        <nav className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <nav className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-lg shadow-gray-300/50 dark:shadow-blue-900/30 rounded-2xl sticky top-0 z-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link to="/" className="text-2xl font-bold text-linkedin-blue">
-                            LinkedIn
+                        <Link to="/" className="text-2xl font-bold tracking-tight text-linkedin-blue">
+                            AppDost Connect
                         </Link>
                     </div>
 
                     {/* Nav Icons & User */}
                     <div className="flex items-center space-x-2 sm:space-x-4">
-                        <Link to={`/profile/${authUser._id}`} className="flex items-center space-x-2 text-sm font-medium p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <Link to={`/profile/${authUser._id}`} className="flex items-center space-x-2 text-sm font-medium p-2 rounded-2xl hover:bg-gray-200 dark:hover:bg-gray-700">
                             {authUser.profilePic ? (
-                                <img src={authUser.profilePic} alt="profile" className="w-6 h-6 rounded-full object-cover" />
+                                <img src={authUser.profilePic} alt="profile" className="w-8 h-8 rounded-full object-cover border-2 border-gradient-to-r from-blue-500 to-blue-600" />
                             ) : (
-                                <UserCircleIcon className="w-6 h-6" />
+                                <UserCircleIcon className="w-8 h-8 text-gray-400" />
                             )}
-                            <span className="hidden sm:block">Welcome, {authUser.fullName.split(' ')[0]}</span>
+                            <span className="hidden sm:block text-gray-600 dark:text-gray-300">Welcome, {authUser.fullName.split(' ')[0]}</span>
                         </Link>
-                        
-                        {/* --- 5. NEW NOTIFICATION BUTTON --- */}
+
                         <div className="relative">
                             <button
                                 onClick={handleNotificationClick}
-                                className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+                                className="p-2 rounded-2xl hover:bg-gray-200 dark:hover:bg-gray-700"
                             >
-                                <BellIcon className="w-6 h-6" />
+                                <BellIcon className="w-6 h-6 text-gray-600 dark:text-gray-300" />
                                 {hasUnread && (
                                     <span className="absolute top-1 right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-gray-800"></span>
                                 )}
@@ -128,28 +127,27 @@ const Navbar = () => {
                                 />
                             )}
                         </div>
-                        {/* ---------------------------------- */}
 
                         <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+                            className="p-2 rounded-2xl hover:bg-gray-200 dark:hover:bg-gray-700"
                         >
                             {theme === 'light' ? (
-                                <MoonIcon className="w-6 h-6" />
+                                <MoonIcon className="w-6 h-6 text-gray-600" />
                             ) : (
-                                <SunIcon className="w-6 h-6" />
+                                <SunIcon className="w-6 h-6 text-gray-300" />
                             )}
                         </button>
 
                         <button
                             onClick={logout}
                             disabled={loading}
-                            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+                            className="p-2 rounded-2xl hover:bg-gray-200 dark:hover:bg-gray-700"
                         >
                             {loading ? (
                                 <div className="w-6 h-6 border-2 border-t-transparent border-gray-500 rounded-full animate-spin"></div>
                             ) : (
-                                <ArrowLeftOnRectangleIcon className="w-6 h-6" />
+                                <ArrowLeftOnRectangleIcon className="w-6 h-6 text-gray-600 dark:text-gray-300" />
                             )}
                         </button>
                     </div>

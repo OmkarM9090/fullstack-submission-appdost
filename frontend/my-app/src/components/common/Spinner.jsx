@@ -1,9 +1,9 @@
 import React from 'react';
 
-// A simple white spinner for buttons
+// A modern spinner with consistent styling
 const Spinner = () => {
   return (
-    <div className="w-6 h-6 border-4 border-t-transparent border-white rounded-full animate-spin"></div>
+    <div className="w-6 h-6 border-4 border-t-transparent border-gray-300 dark:border-gray-600 rounded-full animate-spin"></div>
   );
 };
 

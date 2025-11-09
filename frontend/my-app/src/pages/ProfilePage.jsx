@@ -89,14 +89,14 @@ const ProfilePage = () => {
   };
 
   if (!userProfile) {
-    return <p>Loading...</p>;
+    return <p className="text-center text-gray-600 dark:text-gray-300">Loading...</p>;
   }
 
   return (
-    <div className="container mx-auto mt-8 p-4 max-w-4xl">
+    <div className="container mx-auto mt-8 p-4 max-w-4xl bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-lg shadow-gray-300/50 dark:shadow-blue-900/30">
       <form 
         onSubmit={handleSubmit}
-        className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
+        className="bg-white/30 dark:bg-gray-800/30 p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
       >
         <div className="flex justify-between items-center mb-8">
           <button

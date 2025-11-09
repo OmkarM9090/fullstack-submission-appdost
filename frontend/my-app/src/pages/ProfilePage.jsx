@@ -28,7 +28,7 @@ const ProfilePage = () => {
       try {
         const response = await axios.get(`/api/users/${id}`);
         setUserProfile(response.data);
-        setImagePreview(response.data.profilePic || null); // Update image preview with fetched profile picture
+        setImagePreview(response.data.profilePic || UserCircleIcon); // Ensure profilePic is set or fallback to default icon
       } catch (error) {
         console.error('Error fetching user profile:', error);
       }

@@ -13,7 +13,6 @@ import { formatDate } from '../../lib/formatDate.js'; // <-- NEW
 
 // --- 3. NEW NOTIFICATION DROPDOWN COMPONENT ---
 const NotificationDropdown = ({ notifications, onClose }) => {
-    
     const getNotificationMessage = (notif) => {
         switch (notif.type) {
             case 'like-post':
@@ -29,7 +28,7 @@ const NotificationDropdown = ({ notifications, onClose }) => {
 
     return (
         <div 
-            className="absolute right-0 mt-2 w-80 sm:w-96 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-20 border dark:border-gray-700"
+            className="absolute right-0 mt-2 w-full max-w-xs sm:max-w-sm md:max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-lg z-20 border dark:border-gray-700"
             onMouseLeave={onClose} // Close when mouse leaves
         >
             <div className="p-4 font-semibold border-b dark:border-gray-700">Notifications</div>

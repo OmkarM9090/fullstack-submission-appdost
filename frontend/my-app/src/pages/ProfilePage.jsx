@@ -28,6 +28,7 @@ const ProfilePage = () => {
       try {
         const response = await axios.get(`/api/users/${id}`);
         setUserProfile(response.data);
+        setImagePreview(response.data.profilePic || null); // Update image preview with fetched profile picture
       } catch (error) {
         console.error('Error fetching user profile:', error);
       }

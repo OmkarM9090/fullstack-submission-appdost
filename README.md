@@ -24,14 +24,12 @@ AppDost Connect is a **modern, responsive, and feature-rich** social platform in
 
 ## 📸 Project Demo
 
-🎥 _Add your demo GIF or screenshots here_  
+
 ![AppDost Connect Demo](./screenshots/one.png)
 ![AppDost Connect Demo](./screenshots/two.png)
-![AppDost Connect Demo](./screenshots/three.png)
-![AppDost Connect Demo](./screenshots/four.png)
 ![AppDost Connect Demo](./screenshots/five.png)
 
-> Shows main feed, dark mode, post interactions, and profile editing.
+
 
 ---
 

@@ -1,142 +1,245 @@
-AppDost Connect - Full Stack Internship Submission
+# 🌐 AppDost Connect
 
-This is a full-stack MERN project, "AppDost Connect," built as a technical assignment for the AppDost Full Stack Developer Internship.
+**A Full-Stack MERN Social Media Platform**  
+Built as a technical submission for the **AppDost Full Stack Developer Internship**.
 
-The application is a modern, clean, and feature-rich social media platform inspired by LinkedIn, designed to demonstrate proficiency in both frontend and backend development.
+AppDost Connect is a **modern, responsive, and feature-rich** social platform inspired by **LinkedIn**, designed to showcase strong **frontend + backend integration**, **clean architecture**, and **advanced MERN development skills**.
 
-Submitted by: Omkar Mahadik
-Email: omkarmahadik180@gmail.com
-LinkedIn Profile:[https://www.linkedin.com/in/omkar-mahadik-976532283/](https://www.linkedin.com/in/omkar-mahadik-976532283/)
+---
 
-🚀 Live Demo Links
+## 👨‍💻 Submitted By
 
-Live Frontend (Vercel): [https://fullstack-submission-appdost.vercel.app](https://fullstack-submission-appdost.vercel.app)
+**Name:** Omkar Mahadik  
+**Email:** [omkarmahadik180@gmail.com](mailto:omkarmahadik180@gmail.com)  
+**LinkedIn:** [linkedin.com/in/omkar-mahadik-976532283](https://www.linkedin.com/in/omkar-mahadik-976532283/)  
 
-Live Backend (Render): [https://fullstack-submission-appdost.onrender.com](https://fullstack-submission-appdost.onrender.com)
+---
 
-📸 Project Demo
+## 🚀 Live Demo Links
 
-Here is a short demo of the application in action, showing the main feed, dark mode, post interactions, and the profile page.
+- **Frontend (Vercel):** [https://fullstack-submission-appdost.vercel.app](https://fullstack-submission-appdost.vercel.app)  
+- **Backend (Render):** [https://fullstack-submission-appdost.onrender.com](https://fullstack-submission-appdost.onrender.com)  
 
-(Instructions: Replace the link below with the URL of your own screenshot or GIF. See the steps above.)
+---
 
-✨ Features
+## 📸 Project Demo
 
-This project fulfills all core requirements from the assignment, as well as all optional bonus features and several "wow" features to demonstrate advanced skills.
+🎥 _Add your demo GIF or screenshots here_  
+(e.g., `![AppDost Connect Demo](demo.gif)`)
 
-Core Requirements (Assignment)
+> Shows main feed, dark mode, post interactions, and profile editing.
 
-Full User Authentication: Secure signup, login, and logout (using JWT & cookies).
+---
 
-Create Posts: Logged-in users can create new posts with text.
+## ✨ Features Overview
 
-Public Feed: All users can see a public feed, sorted with the latest posts first.
+This project includes **all core assignment requirements**, **optional bonus features**, and several **advanced “wow” enhancements** to demonstrate full-stack mastery.
 
-User Identity: The user's name is displayed on the navbar.
+---
 
-🏆 Bonus & "Wow" Features (Above & Beyond)
+### ✅ Core Requirements
 
-Modern UI/UX: Clean, responsive, and aesthetic design with full Dark Mode support.
+- 🔐 **User Authentication** — Secure signup, login, and logout using **JWT + cookies**  
+- 📝 **Create Posts** — Authenticated users can create posts with text  
+- 📰 **Public Feed** — View a global feed with latest posts first  
+- 👤 **User Identity** — Logged-in user's name displayed in navbar  
 
-Post Image Uploads: Users can upload images with their posts, hosted on Cloudinary.
+---
 
-Full Post CRUD: Users can Edit and Delete their own posts.
+### 🌟 Bonus & “Wow” Features
 
-Post Interactions: Users can Like and Unlike posts.
+#### 🧠 UI/UX Enhancements
+- 🎨 Clean, minimal, and fully **responsive** design  
+- 🌙 Full **Dark Mode** support  
 
-Advanced Comment System:
+#### 📸 Posts
+- 📷 Image upload support (stored on **Cloudinary**)  
+- ✏️ **Edit** and 🗑️ **Delete** your posts  
+- ❤️ Like & Unlike functionality  
 
-Users can comment on posts.
+#### 💬 Advanced Comment System
+- 💭 Add, edit, and delete comments  
+- 👍 Like/Unlike comments  
+- 💡 **Comment Suggestions**: Quick-reply buttons (e.g., “Congratulations!”)
 
-Users can Edit and Delete their own comments.
+#### 👥 Profile Management
+- 🧍 View your own or others’ profiles  
+- 🪞 **Edit profile** (Full Name, Headline, Bio/Description)  
+- 🖼️ Upload or remove **profile picture**  
+- 🔙 “Back” navigation from profile  
 
-Users can Like and Unlike other comments.
+#### 🔔 Notification System
+- 🛎️ Notifications for likes, comments, and replies  
+- 🔴 Unread dot indicator on navbar bell icon  
+- ✅ Auto-mark as “read” when dropdown is viewed  
 
-Comment Suggestions: Quick-reply buttons (e.g., "Congratulations!") appear under posts.
+---
 
-Full Profile Page:
+## 🧰 Tech Stack
 
-Users can view their own profile, which includes a "Back" button and "Edit" toggle.
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | React.js (Vite), Tailwind CSS, React Router, Framer Motion, React Hot Toast |
+| **Backend** | Node.js, Express.js, MongoDB (Atlas), JWT, Cloudinary |
+| **Database** | MongoDB Atlas |
+| **Hosting** | Frontend → Vercel, Backend → Render |
+| **Image Storage** | Cloudinary |
 
-Users can view other users' profiles by clicking their names.
+---
 
-Profile Editing: Users can update their Full Name, Headline, and a detailed Bio/Description.
+## ⚙️ Getting Started (Run Locally)
 
-Profile Picture: Users can upload a new profile picture or Remove their existing one.
+Follow these steps to set up the project locally 👇
 
-Notification System:
+---
 
-Users receive notifications when others like a post, comment on a post, or like a comment.
+### 🪄 Prerequisites
 
-An unread notification dot appears on a bell icon in the navbar.
+Make sure you have:
+- **Node.js** (v18+)
+- **npm**
+- **MongoDB Atlas** account
+- **Cloudinary** account (for image uploads)
 
-Notifications are marked as "read" when the dropdown is viewed.
+---
 
-🛠️ Tech Stack
+### 1️⃣ Clone the Repository
 
-This project was built using the MERN stack as specified in Option 1 of the assignment.
-
-Frontend
-
-Backend
-
-⚙️ Getting Started & How to Run Locally
-
-To run this project on your local machine, please follow these steps.
-
-Prerequisites
-
-Node.js (v18 or later)
-
-npm
-
-A MongoDB Atlas account (for MONGO_URI)
-
-A Cloudinary account (for image upload keys)
-
-1. Clone the Repository
-
-git clone [https://github.com/OmkarM9090/fullstack-submission-appdost.git](https://github.com/OmkarM9090/fullstack-submission-appdost.git)
+```bash
+git clone https://github.com/OmkarM9090/fullstack-submission-appdost.git
 cd fullstack-submission-appdost
 
-
-2. Backend Setup
-
-# 1. Navigate to the backend folder
+### 2️⃣ Backend Setup
+# Navigate to backend
 cd backend
 
-# 2. Install dependencies
+# Install dependencies
 npm install
 
-# 3. Create a .env file
-# (Copy the contents from .env.example)
-touch .env
+# Create environment file
+cp .env.example .env
 
-# 4. Add your secret keys to the .env file
-# (See backend/.env.example for all required variables)
-# You must provide your MONGO_URI, JWT_SECRET, and Cloudinary keys.
+Now open .env and add your credentials:
 
-# 5. Run the server
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_secret_key
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+Run the backend server:
+
 npm run dev
-# Server will be running on http://localhost:5001
 
 
-3. Frontend Setup
+Server will start on http://localhost:5001
 
-# 1. Navigate to the frontend folder (from the root)
-cd frontend/my-app
+3️⃣ Frontend Setup
+# Navigate to frontend
+cd ../frontend/my-app
 
-# 2. Install dependencies
+# Install dependencies
 npm install
 
-# 3. Create a .env file
-# (Copy the contents from .env.example)
-touch .env
+# Create environment file
+cp .env.example .env
 
-# 4. Add the backend API URL to the .env file
-# The file should contain:
-# VITE_API_URL=http://localhost:5001
 
-# 5. Run the app
+Add backend API URL:
+
+VITE_API_URL=http://localhost:5001
+
+
+Run the development server:
+
 npm run dev
-# App will be running on http://localhost:5173
+App will be running at http://localhost:5173
+
+📁 Folder Structure
+fullstack-submission-appdost/
+│
+├── backend/              # Express + MongoDB backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middlewares/
+│   ├── utils/
+│   └── server.js
+│
+├── frontend/
+│   └── my-app/           # React (Vite) frontend
+│       ├── src/
+│       │   ├── components/
+│       │   ├── pages/
+│       │   ├── hooks/
+│       │   ├── store/
+│       │   └── utils/
+│       └── public/
+│
+└── README.md
+🔒 Environment Variables
+
+Both frontend and backend use environment variables for security and configuration.
+
+Backend .env.example
+PORT=5001
+MONGO_URI=
+JWT_SECRET=
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+Frontend .env.example
+VITE_API_URL=http://localhost:5001
+
+
+📬 API Endpoints Overview
+| Endpoint            | Method | Description       |
+| ------------------- | ------ | ----------------- |
+| `/auth/signup`      | POST   | Register new user |
+| `/auth/login`       | POST   | Login user        |
+| `/auth/logout`      | GET    | Logout user       |
+| `/posts`            | GET    | Get all posts     |
+| `/posts`            | POST   | Create post       |
+| `/posts/:id`        | PUT    | Edit post         |
+| `/posts/:id`        | DELETE | Delete post       |
+| `/comments/:postId` | POST   | Add comment       |
+| `/profile/:id`      | GET    | View user profile |
+| `/notifications`    | GET    | Get notifications |
+🧠 Key Learnings
+
+Efficient frontend-backend integration
+
+Handling JWT authentication & secure cookies
+
+Image upload & hosting via Cloudinary
+
+Building reusable React components
+
+Managing state using custom hooks & stores
+
+Implementing clean, scalable folder structure
+
+💫 Future Enhancements
+
+💬 Real-time chat & messaging
+
+🔔 Push notifications
+
+🧑‍🤝‍🧑 Follow system (connections)
+
+📊 Analytics dashboard
+
+🕵️‍♂️ Explore feed with AI suggestions
+
+🏁 Conclusion
+
+AppDost Connect demonstrates strong full-stack MERN expertise, clean UI/UX design, and the ability to build real-world, scalable web applications.
+
+If you liked this project, please ⭐ the repo and connect with me on LinkedIn!
+
+🧾 License
+
+This project is for educational and internship evaluation purposes under the AppDost Internship Assignment guidelines.
+
+© 2025 Omkar Mahadik | AppDost Connect
